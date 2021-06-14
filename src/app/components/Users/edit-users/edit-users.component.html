@@ -1,0 +1,90 @@
+<div class="edit-user">
+  <h2 mat-dialog-title>Edit User {{ editUser?.firstName }}</h2>
+  <mat-dialog-content>
+    <form #editForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          ngModel="{{ editUser?.firstName }}"
+          name="lastName"
+          class="form-control"
+          id="lastName"
+          aria-describedby="emailHelp"
+          placeholder="lastName"
+        />
+  <mat-dialog-content>
+    <form #editForm="ngForm">
+      <div class="form-group">
+        <label for="name">Last name</label>
+        <input
+          type="text"
+          ngModel="{{ editUser?.lastName }}"
+          name="lastName"
+          class="form-control"
+          id="lastName"
+          aria-describedby="emailHelp"
+          placeholder="lastName"
+        />
+      </div>
+      <div class="form-group">
+        <label for="isAdmin">Admin?</label>
+        <input
+          type="text"
+          ngModel="{{ editUser?.isAdmin }}"
+          name="isAdmin"
+          class="form-control"
+          id="isAdmin"
+          aria-describedby="emailHelp"
+          placeholder="isAdmin"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Password</label>
+        <input
+          type="text"
+          ngModel="{{ editUser?.password }}"
+          name="password"
+          class="form-control"
+          id="password"
+          aria-describedby="emailHelp"
+          placeholder="Password"
+        />
+      </div>
+      <input
+        type="hidden"
+        ngModel="{{ editUser?.id }}"
+        name="id"
+        class="form-control"
+        id="id"
+        placeholder="Email"
+      />
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          ngModel="{{ editUser?.email }}"
+          name="email"
+          class="form-control"
+          id="email"
+          placeholder="Email"
+        />
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button mat-raised-button color="warn" (click)="closeDialog()">
+      Close
+    </button>
+    <button
+      [disabled]="editForm.invalid"
+      type="submit"
+      mat-raised-button
+      color="primary"
+      class="ml-2"
+      (click)="onUpdateUser(editForm.value)"
+    >
+      Save changes
+    </button>
+  </mat-dialog-actions>
+</div>

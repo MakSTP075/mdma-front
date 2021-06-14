@@ -1,0 +1,21 @@
+
+#home-section {
+  background-image: URL(assets/images/14102816_698230197012042_4937857138588672597_o.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 750px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%;
+  min-height: 750px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card-form {
+  background-color: #e8ebeb;
+}

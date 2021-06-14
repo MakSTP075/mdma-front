@@ -1,0 +1,21 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <h1>Siteviews to visit</h1>
+  </div>
+  <div class="row">
+    <div (click)="selectSite(i)" routerLink="../site" *ngFor="let site of sites; let i = index">
+          <div class="jumbotron">
+            <img [src]="'assets/images/14068620_1166016716798795_6662713175454227154_o.jpg'" alt="" class="img-responsive"
+            style="max-width: 755px;">
+            <br>
+            <br>
+            <hr>
+          <h1>{{site.siteviewName}}</h1>
+          <p style="max-width: 755px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2C3739">
+  <div class="collapse navbar-collapse d-flex justify-content-center">
+      <a class="navbar-brand" href="#">
+          <img src=".\assets\images\logo.png">
+      </a>
+      <ul class="navbar-nav mr-auto mt-4 mt-lg-3 col-md-6">
+
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <button
+        type="button"
+        routerLink="../home"
+        class="btn mr-1 btn-outline-success">
+        Home
+      </button>
+      </div>
+  </div>
+</nav>
+<br>
+<div style="margin-top: 50px" class="container">
+  <div style="background-color: #ffff; border-radius: 5px; position: absolute">
+    <div style="width: 100%; position: relative">
+      <img
+        [src]="'assets/Historic/olimpijski_muzej.jpg'"
+        alt=""
+        style="border-radius: 5px"
+      />
+    </div>
+    <h1>{{ historic.historicName }}</h1>
+    <form [formGroup]="form">
+      <div>
+        <textarea
+          formControlName="details"
+          style="width: 100%; height: 100px"
+          [value]="historic.details"
+        ></textarea>
+      </div>
+    </form>
+
+    <button *ngIf="edited" (click)="saveChanges()" class="btn btn-success">
+      Save
+    </button>
+    <button  type="submit" (click)="onDelete()" class="btn btn-warning">
+      Delete
+    </button>
+  </div>
+</div>

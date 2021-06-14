@@ -29,7 +29,9 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        // { type: 'lcovonly' }, // ovo si dodala, // ovaj --open si dodala u package.json
+        { type: 'text-summary' },
+        // fixWebpackSourcePaths.true //ovo si dodala
       ]
     },
     reporters: ['progress', 'kjhtml'],
