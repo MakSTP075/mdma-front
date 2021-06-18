@@ -21,7 +21,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'home',
         pathMatch: 'full',
       },
       {
@@ -57,14 +57,14 @@ const routes: Routes = [
         component: CategoryComponent,
         children: [
           {
-              path: 'home',
-              component: HomeComponent
+            path: 'home',
+            component: HomeComponent
           },
           {
             path: '',
             outlet: 'sidemenu',
             component: SideMenuComponentComponent
-        }
+          }
         ]
       },
       {
@@ -72,14 +72,14 @@ const routes: Routes = [
         component: CaterogyHistoricComponent,
         children: [
           {
-              path: 'home',
-              component: HomeComponent
+            path: 'home',
+            component: HomeComponent
           },
           {
             path: '',
             outlet: 'sidemenu',
             component: SideMenuComponentComponent
-        }
+          }
         ]
       },
       {
@@ -87,14 +87,14 @@ const routes: Routes = [
         component: CategorySietviewsComponent,
         children: [
           {
-              path: 'home',
-              component: HomeComponent
+            path: 'home',
+            component: HomeComponent
           },
           {
             path: '',
             outlet: 'sidemenu',
             component: SideMenuComponentComponent
-        },
+          },
         ]
       },
       {
@@ -108,7 +108,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes), RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

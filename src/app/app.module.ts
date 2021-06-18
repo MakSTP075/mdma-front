@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { UserSearchPipe } from './pipes/user-search.pipe';
 import { HomeComponent } from './components/home/home.component';
 import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
@@ -30,6 +30,7 @@ import { SideMenuComponentComponent } from './components/side-menu-component/sid
 import { CaterogyHistoricComponent } from './components/caterogy-historic/caterogy-historic.component';
 import { CategorySietviewsComponent } from './components/category-sietviews/category-sietviews.component';
 import { RegisterComponent } from './components/register/register.component';
+import { StateServiceService } from './services/state-service.service';
 
 @NgModule({
   declarations: [
@@ -67,10 +68,10 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     ReactiveFormsModule,
 
-    ],
-    exports: [HomeComponent,],
-  providers: [],
+  ],
+  exports: [HomeComponent,],
+  providers: [KorisnikService, StateServiceService],
   bootstrap: [AppComponent],
   schemas: [(CUSTOM_ELEMENTS_SCHEMA)],
 })
-export class AppModule {}
+export class AppModule { }
